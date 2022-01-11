@@ -2,15 +2,15 @@ const axios = require("axios");
 
 const YOUTUBE_NODE_TYPE = "youTube";
 
-const fetchEmbed = async (id, logger) => {
+const fetchEmbed = async (url, logger) => {
   try {
     const {data} = await axios.get("https://www.youtube.com/oembed", {
-      params: {url: `https://youtu.be/${id}`, maxwidth: 800},
+      params: {url: url, maxwidth: 800},
     });
-    logger.info(`Fetched oEmbed data for ${id}: ${data.title}`);
+    logger.info(`Fetched oEmbed data for ${url}: ${data.title}`);
     return data;
   } catch (error) {
-    logger.warn(`Error fetching oEmbed data for ${id}: ${error.message}`);
+    logger.warn(`Error fetching oEmbed data for ${url}: ${error.message}`);
   }
 };
 
@@ -19,12 +19,14 @@ exports.sourceNodes = async (
   options
 ) => {
   for (const id of options?.ids || []) {
-    const embedData = await fetchEmbed(id, reporter);
+    const ytUrl = `https://youtu.be/${id}`;
+    const embedData = await fetchEmbed(ytUrl, reporter);
     if (!embedData) return;
 
     createNode({
       id: id,
       ...embedData,
+      url: ytUrl,
       internal: {
         type: YOUTUBE_NODE_TYPE,
         contentDigest: createContentDigest(id),
