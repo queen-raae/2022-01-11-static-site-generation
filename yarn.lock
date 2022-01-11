@@ -1681,10 +1681,10 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@raae/gatsby-theme-queen@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@raae/gatsby-theme-queen/-/gatsby-theme-queen-0.0.3.tgz#62bfb4fbf1523a2c523e9f201808af693b4ab90c"
-  integrity sha512-DVMLKzcvMaYkH8i/Zz7JjOSQITt6WYtJmyHa1stwWbfuImUCWJGJHqWpC3GI1QatF3AvB1lXjxuARHoOX4geCA==
+"@raae/gatsby-theme-queen@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@raae/gatsby-theme-queen/-/gatsby-theme-queen-0.1.1.tgz#d2273f9bf31626dbe9d0550e3bd3beb14278f131"
+  integrity sha512-LvfzwPzShLNOfZ+XQQNEXbMgFPYLcaf2am+FK+vBWM8DU96kaLiPX/h2efPV/MTzrolDQPFdYFP7q2yOO3gI/Q==
   dependencies:
     gatsby-plugin-sass "5.4.0"
     gatsby-plugin-sharp "4.4.0"
@@ -1722,6 +1722,14 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.2.1.tgz#b88b5724283db80b507cd612caee9a1947412a20"
   integrity sha512-BrzrgtaqEre0qfvI8sMTaEvx+bayuhPmfe2rfeUGPPHYr/PLxCOqkOe4TQTDPb+qcqgNcsAtXV/Ew74mcDIE8w==
 
+"@sindresorhus/slugify@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-2.1.0.tgz#1e252117008cd1121e4cdea9fc67767dd1653d25"
+  integrity sha512-gU3Gdm/V167BmUwIn8APHZ3SeeRVRUSOdXxnt7Q/JkUHLXaaTA/prYmoRumwsSitJZWUDYMzDWdWgrOdvE8IRQ==
+  dependencies:
+    "@sindresorhus/transliterate" "^1.0.0"
+    escape-string-regexp "^5.0.0"
+
 "@sindresorhus/slugify@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-1.1.2.tgz#c2c0129298b8caace2d9156176fe244d0e83156c"
@@ -1736,6 +1744,14 @@
   integrity sha512-5/kmIOY9FF32nicXH+5yLNTX4NJ4atl7jRgqAJuIn/iyDFXBktOKDxCvyGE/EzmF4ngSUvjXxQUQlQiZ5lfw+w==
   dependencies:
     escape-string-regexp "^2.0.0"
+    lodash.deburr "^4.1.0"
+
+"@sindresorhus/transliterate@^1.0.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/transliterate/-/transliterate-1.5.0.tgz#841109db51fe3158787c42a91c45c3ffea7589be"
+  integrity sha512-/sfSkoNelLq5riqNRp5uBjHIKBi1MWZk9ubRT1WiBQuTfmDf7BeQkph2DJzRB83QagMPHk2VDjuvpy0VuwyzdA==
+  dependencies:
+    escape-string-regexp "^5.0.0"
     lodash.deburr "^4.1.0"
 
 "@szmarczak/http-timer@^1.1.2":
@@ -4378,6 +4394,11 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
+
+escape-string-regexp@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz#4683126b500b61762f2dbebace1806e8be31b1c8"
+  integrity sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==
 
 eslint-config-react-app@^6.0.0:
   version "6.0.0"
